@@ -25,7 +25,7 @@
 				type : 'get'
 				, url : 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json'
 				, data : {
-					key : '2986a5a21fd921bb2b7a0e8581bf6cee'
+					key : 'key'
 					, targetDt : searchDate
 				}, success : callback
 				, error : function(){
@@ -40,7 +40,7 @@
 						type : 'get'
 						, url : 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json'
 						, data : {
-								key : '2986a5a21fd921bb2b7a0e8581bf6cee'
+								key : 'key'
 								, movieCd : movieCode[i]
 							}, success : function(result){
 									console.log(result)
