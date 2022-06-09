@@ -1,0 +1,30 @@
+<%@page import="kr.ac.kopo.member.vo.MemberVO"%>
+<%@page import="kr.ac.kopo.member.dao.MemberDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String id = request.getParameter("id");
+
+	MemberVO member = MemberDAO.selectById(String id);
+%>    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<hr>
+		<h2>회원 정보 상세</h2>
+		<hr>
+		<table border="1" style="width:80%">
+			<tr>
+				<th width="25%">아이디</th>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

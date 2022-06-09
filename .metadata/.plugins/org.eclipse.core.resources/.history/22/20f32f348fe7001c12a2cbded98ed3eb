@@ -1,0 +1,17 @@
+package kr.ac.kopo.board.dao;
+
+import java.util.List;
+
+/**
+ * t_board 테이블의 CRUD 담당 클래스
+ */
+public class BoardDAO {
+	
+	/**
+	 *	전체게시글 조회 메소드 
+	 */
+	public List<BoardVO> selectAll() {
+		// 하나의 레코드를 가져오는 형태가 VO
+		 return null;
+	}
+}

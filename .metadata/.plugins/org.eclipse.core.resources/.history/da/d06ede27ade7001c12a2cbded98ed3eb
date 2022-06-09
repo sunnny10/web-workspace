@@ -1,0 +1,16 @@
+package kr.ac.kopo.member.vo;
+
+public class MemberVO {
+	private String id;
+	private String name;
+	private String password;
+	private String email_id;
+	private String email_domain;
+	private String tel1;
+	private String tel2;
+	private String tel3;
+	private String basic_addr;
+	private String detail_addr;
+	private char type;
+	private String date;
+}

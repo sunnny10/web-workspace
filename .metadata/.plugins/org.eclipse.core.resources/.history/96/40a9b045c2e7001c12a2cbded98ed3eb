@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+
+	String id = request.getParameter("id");
+	String password = request.getParameter("password");
+	String name = request.getParameter("name");
+	String email = request.getParameter("email");
+	String tel = request.getParameter("tel");
+	String post = request.getParameter("post");
+	String basicAddr = request.getParameter("basicAddr");
+	String detailAddr = request.getParameter("detailAddr");
+	String addr = basicAddr + "," + detailAddr;
+	String type = request.getParameter("type");
+	
+%>
