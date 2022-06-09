@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img {
+		width: 150px;
+		height: 120px;
+		float: left;
+	}
+	
+	button {
+		height : 120px;
+		float: left;
+	}
+</style>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#prevBtn').click(function(){
+			$('img').last().prependTo('span');	// id를 써서 구분하는 게 더 좋다.
+		})
+		
+		$('#nextBtn').click(function(){
+			$('img').first().appendTo('span');
+		})
+		
+		// id를 통해서 여러개 인터벌 구분 가능
+		// 5초 마다 간격줘서 실행
+		id = setInterval(() => {
+			// 이벤트가 발생한 것처럼 강제적으로 실행
+			$('#nextBtn').trigger('click');
+		}, 2000);
+		
+		/* $('button').click(function(){
+			$('img').last().prependTo('body') // <-> first, 이 외에는 다 eq()로 접근해야 한다.
+		}) */
+		
+		
+	})
+</script>
+</head>
+<body>
+	<button id="prevBtn">PREV</button>
+	<!-- div 영역이 블록이라 한 줄로 안 나옴, css 적용해줘야 한다. -->
+	<span>
+		<img src="images/dog01.jpg">
+		<img src="images/dog02.jpg">
+		<img src="images/dog03.jpg">
+		<img src="images/dog04.jpg">
+	</span>
+	<button id="nextBtn">NEXT</button>
+</body>
+</html>

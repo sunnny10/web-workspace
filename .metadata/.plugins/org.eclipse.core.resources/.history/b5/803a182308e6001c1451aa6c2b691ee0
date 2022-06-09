@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	/*
+		객체등록 : 공유영역.setAttribute("이름", "값");
+		객체조회 : 공유영역.getAttribute("이름");
+		JSP 공유영역 4가지 : pageContext, request, session, application
+	*/
+	pageContext.setAttribute("msg", "pageContext영역에 등록완료");
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%--
+		EL 공유영역 4가지 : pageScope, requestScope, sessionScope, applicationScope
+	--%>
+	empty msg : ${ empty msg }<br>
+	msg : <%= pageContext.getAttribute("msg") %><br>
+</body>
+</html>

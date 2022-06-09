@@ -1,0 +1,27 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="kr.ac.kopo.util.ConnectionFactory"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%
+	Connection conn = new ConnectionFactory().getConnection();
+	StringBuilder sql = new StringBuilder();
+	sql.append("select ID, NAME, PASSWORD, EMAIL_ID, EMAIL_DOMAIN, TEL1, TEL2, TEL3, BASIC_ADDR, DETAIL_ADDR, to_char(REG_DATE, 'yyyy-mm-dd') reg_date");
+	sql.append("	from t_member");
+	sql.append(" order by reg_date desc");
+	
+	PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+	ResultSet rs = pstmt.executeQuery();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 목록</title>
+</head>
+<body>
+	
+</body>
+</html>

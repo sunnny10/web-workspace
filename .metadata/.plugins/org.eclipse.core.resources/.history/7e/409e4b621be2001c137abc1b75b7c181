@@ -1,0 +1,10 @@
+package kr.ac.kopo.servlet;
+
+public class ExamServlet {
+	/*
+		http://localhost:9999/Lecture-Web/servlet/exam?name=hong 입력시
+		
+		웹브라우저에 
+		이름 : hong
+	 */
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#searchResult {
+		width: 70%;
+		height: 1200px;
+		border: 1px solid red;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	let movieCode = [];
+	$(document).ready(function() {
+		
+		
+		$('#searchBtn').click(function () {
+			
+			let searchDate = $('#searchDate').val().split('-').join('');
+			
+			
+			$.ajax({
+				type : 'get'
+				, url : 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json'
+				, data : {
+					key : '2986a5a21fd921bb2b7a0e8581bf6cee'
+					, targetDt : searchDate
+				}, success : callback
+				, error : function(){
+					alert('실패')
+				}	
+			})
+						
+		})
+			for(let i = 0; i < 5; i++){
+				$(document).on("click", "#detailBtn"+i, (e) => {
+					$.ajax({
+						type : 'get'
+						, url : 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json'
+						, data : {
+								key : '2986a5a21fd921bb2b7a0e8581bf6cee'
+								, movieCd : movieCode[i]
+							}, success : function(result){
+									console.log(result)
+									$("#detail" + i).empty()
+									
+									let list = result.movieInfoResult.movieInfo;
+									let directors = list.directors[0].peopleNm
+									let genres = list.genres
+									let actors = list.actors
+									
+									$("#detail" + i).css({
+										  'width': '100%',
+										  'border': '1px solid blue'
+										});
+									$("#detail" + i).append(`<span>감독 : ${directors}</span>`);
+									$("#detail" + i).append(`<br>`);
+									$("#detail" + i).append(`<span>장르 : `) 
+									for(let j=0; j<genres.length; j++){
+										$("#detail" + i).append(`${genres[j].genreNm} `);									
+									}
+									$("#detail" + i).append(`</span> <br>`);	
+									$("#detail" + i).append(`배우정보<br>`);
+									for(let k=0; k<actors.length; k++){
+										$("#detail" + i).append(`<span>${actors[k].peopleNm}(${actors[k].cast}역)<br></span>`);	
+									}
+									
+							}
+							, error : function(){
+								alert('실패')
+							}	
+						
+					})
+					$("#detail" + i).toggle();
+				})
+			}
+		
+
+	})
+	
+	function callback(result){
+		let list = result.boxOfficeResult.dailyBoxOfficeList;
+		$('#searchResult').empty()
+		for(let i = 0; i < 5; i++){
+			let movieData = list[i]
+			let rank = movieData.rank
+			let name = movieData.movieNm
+			let audiCnt = movieData.audiCnt
+			movieCode[i] = movieData.movieCd
+			
+			$('#searchResult').append('<h4>' + rank + '위</h4>');
+			$('#searchResult').append(`<strong>${name}</strong>`);
+			$('#searchResult').append(`<span>(${audiCnt}명)</span>`);
+			$('#searchResult').append(`<br>`);
+			$('#searchResult').append('<button id="detailBtn' + i + '">' + "상세보기" + '</button>');
+			$('#searchResult').append('<div style="display:none;" id="detail' + i + '">' + '</div>');
+			$('#searchResult').append(`<hr>`);
+			
+		}
+	}
+	
+
+	
+	
+	
+
+</script>
+</head>
+<body>
+	<h2>일별 박스오피스 조회서비스</h2>
+	조회날짜 : <input type="date" id="searchDate">
+	<button id="searchBtn">조회</button>
+	<h3>조회 결과</h3>
+	<div id="searchResult"></div>
+</body>
+</html>

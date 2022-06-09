@@ -1,0 +1,24 @@
+package kr.ac.kopo.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ExamServlet extends HttpServlet{
+	/*
+	http://localhost:9999/Lecture-Web/servlet/exam?name=hong 입력시
+	
+	웹브라우저에 
+	이름 : hong
+	 */
+
+	@Override
+	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		
+	}
+
+	
+}

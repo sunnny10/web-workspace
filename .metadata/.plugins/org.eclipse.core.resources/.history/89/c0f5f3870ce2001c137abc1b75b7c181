@@ -1,0 +1,11 @@
+package kr.ac.kopo.servlet;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.http.HttpServlet;
+
+public class HelloServlet extends HttpServlet{
+	
+	public void init(ServletConfig config) throws SecurityException {
+		
+	}
+}

@@ -1,0 +1,19 @@
+package kr.ac.kopo.board;
+
+public class BoardListVO {
+	private String title;
+	
+	public BoardListVO {
+		
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	
+}

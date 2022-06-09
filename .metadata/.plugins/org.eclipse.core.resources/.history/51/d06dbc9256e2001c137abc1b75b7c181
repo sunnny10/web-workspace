@@ -1,0 +1,54 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="kr.ac.kopo.util.ConnectionFactory"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%
+	Connection conn = new ConnectionFactory().getConnection();
+	StringBuilder sql = new StringBuilder();
+	sql.append("select ID, NAME, PASSWORD, EMAIL_ID, EMAIL_DOMAIN, TEL1, TEL2, TEL3, BASIC_ADDR, DETAIL_ADDR, to_char(REG_DATE, 'yyyy-mm-dd') reg_date");
+	sql.append("	from t_member");
+	sql.append(" order by reg_date desc");
+	
+	PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+	ResultSet rs = pstmt.executeQuery();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 목록</title>
+</head>
+<body>
+	<div align="center">
+		<hr>
+		<h2>전체 회원 목록 조회</h2>
+		<hr>
+		<br>
+		<table border = "1" style="width:80%">
+			<tr>
+				<th>아이디</th>
+				<th>이름</th>
+				<th>비밀번호</th>
+				<th>이메일</th>
+				<th>전화번호</th>
+				<th>주소</th>
+				<th>가입날짜</th>
+			</tr>
+			<%
+				while(rs.next()) {
+					
+				
+			%>
+				<tr>
+					<td>0</td>
+				</tr>				
+			<%
+				}
+			%>
+		</table>
+	</div>
+</body>
+</html>

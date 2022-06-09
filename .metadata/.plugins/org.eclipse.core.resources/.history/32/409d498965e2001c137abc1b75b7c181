@@ -1,0 +1,81 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="kr.ac.kopo.util.ConnectionFactory"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%
+	Connection conn = new ConnectionFactory().getConnection();
+	StringBuilder sql = new StringBuilder();
+	sql.append("select ID, NAME, PASSWORD, EMAIL_ID, EMAIL_DOMAIN, TEL1, TEL2, TEL3, BASIC_ADDR, DETAIL_ADDR, to_char(REG_DATE, 'yyyy-mm-dd') reg_date");
+	sql.append("	from t_member");
+	sql.append(" order by reg_date desc");
+	
+	PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+	ResultSet rs = pstmt.executeQuery();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 목록</title>
+</head>
+<body>
+	<div align="center">
+		<hr>
+		<h2>전체 회원 목록 조회</h2>
+		<hr>
+		<br>
+		<table border = "1" style="width:80%; text-align:center">
+			<tr>
+				<th>아이디</th>
+				<th>이름</th>
+				<th>비밀번호</th>
+				<th>이메일</th>
+				<th>전화번호</th>
+				<th>주소</th>
+				<th>가입날짜</th>
+			</tr>
+			<%
+				StringBuilder email = new StringBuilder();
+				StringBuilder tel = new StringBuilder();
+				StringBuilder addr = new StringBuilder();
+			
+				while(rs.next()) {
+					String id = rs.getString("id");
+					String name = rs.getString("name");
+					String password = rs.getString("password");
+					email.append(rs.getString("email_id"));
+					email.append("@");
+					email.append(rs.getString("email_domain"));
+					tel.append(rs.getString("tel1"));
+					tel.append("-");
+					tel.append(rs.getString("tel2"));
+					tel.append("-");
+					tel.append(rs.getString("tel3"));
+					addr.append(rs.getString("basic_addr"));
+					addr.append(" ");
+					addr.append(rs.getString("detail_addr"));
+					String reg_date = rs.getString("reg_date");
+			%>
+				<tr>
+					<td><%= id %></td>
+					<td><%= name %></td>
+					<td><%= password %></td>
+					<td><%= email %></td>
+					<td><%= tel %></td>
+					<td><%= addr %></td>
+					<td><%= reg_date %></td>
+				</tr>				
+			<%
+				// 값 초기화
+				email.setLength(0);
+				tel.setLength(0);
+				addr.setLength(0);
+				}
+			%>
+		</table>
+	</div>
+</body>
+</html>

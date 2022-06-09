@@ -1,0 +1,46 @@
+
+5월 30, 2022 13:39:55.728 NEW SESSION
+5월 30, 2022 13:39:55.728 [11492:9132:0530/133955.726:ERROR:device_event_log_impl.cc(214)] [13:39:55.727] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 30, 2022 13:40:53.707 [11492:7864:0530/134053.706:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 30, 2022 16:50:46.864 [11492:9132:0530/165046.863:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:50:47.350 [11492:9132:0530/165047.350:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:50:47.628 [11492:9132:0530/165047.628:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:50:48.857 [11492:9132:0530/165048.856:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:53:22.102 [11492:9132:0530/165322.102:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:53:23.670 [11492:9132:0530/165323.670:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:53:24.558 [11492:9132:0530/165324.557:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:53:26.774 [11492:9132:0530/165326.773:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:53:27.207 [11492:9132:0530/165327.206:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 16:53:27.406 [11492:9132:0530/165327.406:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 17:08:32.74 [11492:9132:0530/170832.073:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: (intermediate value) is not iterable", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/components/text_editor/text_editor.js (1)
+5월 30, 2022 18:40:53.706 [11492:3012:0530/184053.706:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 30, 2022 18:42:17.299 [11492:9132:0530/184217.299:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+5월 31, 2022 09:01:21.952 NEW SESSION
+5월 31, 2022 09:01:21.952 [7672:5580:0531/090121.951:ERROR:device_event_log_impl.cc(214)] [09:01:21.951] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 31, 2022 09:02:19.952 [7672:8244:0531/090219.952:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 31, 2022 10:12:06.855 [7672:5580:0531/101206.855:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
+5월 31, 2022 10:51:56.737 [7672:5580:0531/105156.737:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 31, 2022 11:30:43.752 [11472:8620:0531/113043.752:ERROR:device_event_log_impl.cc(214)] [11:30:43.752] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 31, 2022 11:31:41.634 [11472:1204:0531/113141.634:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 31, 2022 13:24:27.195 [11472:8620:0531/132427.195:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 31, 2022 14:11:48.355 [11472:8620:0531/141148.355:ERROR:device_event_log_impl.cc(214)] [14:11:48.354] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 31, 2022 14:11:48.359 [11472:8620:0531/141148.359:ERROR:device_event_log_impl.cc(214)] [14:11:48.358] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+5월 31, 2022 14:40:07.102 [11472:8620:0531/144007.102:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 31, 2022 16:31:41.643 [11472:1964:0531/163141.643:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 31, 2022 18:33:26.392 [11472:8620:0531/183326.392:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 31, 2022 18:33:26.392 [11472:8620:0531/183326.392:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+6월 07, 2022 09:17:07.438 NEW SESSION
+6월 07, 2022 09:17:07.438 [11012:8100:0607/091707.438:ERROR:device_event_log_impl.cc(214)] [09:17:07.438] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+6월 07, 2022 09:18:04.933 [11012:10708:0607/091804.933:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 07, 2022 09:30:43.210 [11012:8100:0607/093043.210:ERROR:device_event_log_impl.cc(214)] [09:30:43.209] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+6월 07, 2022 09:30:43.214 [11012:8100:0607/093043.214:ERROR:device_event_log_impl.cc(214)] [09:30:43.213] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+6월 07, 2022 10:31:22.346 [11012:8100:0607/103122.346:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 10:31:22.811 [11012:8100:0607/103122.346:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 10:32:42.767 [11012:8100:0607/103242.767:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 14:18:02.557 [11012:5888:0607/141802.557:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+6월 07, 2022 15:23:29.900 [11012:8100:0607/152329.900:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 15:23:57.652 [11012:8100:0607/152357.652:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 15:24:58.786 [11012:8100:0607/152458.786:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
+6월 07, 2022 15:26:09.741 [11012:8100:0607/152609.741:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost

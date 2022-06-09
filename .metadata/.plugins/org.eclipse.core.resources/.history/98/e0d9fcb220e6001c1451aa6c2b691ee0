@@ -1,0 +1,30 @@
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="kr.ac.kopo.board.BoardVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// 1
+	BoardVO b = new BoardVO();
+	BoardVO[] bArr = {b};
+	
+	//2
+	Map<String, BoardVO[]> bMap = new HashMap<>();
+	
+	bMap.put("boardList", bArr);
+	
+	b.setTitle("성공");
+	
+	//pageContext.setAttribute("boardList", bArr);
+	pageContext.setAttribute("boardList", bMap);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	성공/실패? ${ boardList[0].title }<br>
+</body>
+</html>

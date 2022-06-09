@@ -1,0 +1,21 @@
+<%@page import="kr.ac.kopo.board.BoardListVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	BoardListVO b1 = new BoardListVO();
+	BoardListVO[] bArr = {b1};
+	
+	b1.setTitle("성공");
+	
+	pageContext.setAttribute("boardList", bArr);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	성공/실패? ${ boardList[0].title }<br>
+</body>
+</html>

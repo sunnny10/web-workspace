@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('button').click(function(){
+			
+			let name = $('#name').val()
+			let age = document.getElementById("age").value
+			
+			//let param = 'name=' + name + '&age' + age
+			
+			let params = {
+				name : name
+				, age : age
+			}
+			
+			/* $.post('param.jsp', "name=hong&age=30", (result) => {
+				$('#msgView').val(result)
+			}) */
+			
+			$.post('/Lecture-Web/ajax/param.jsp', params , (result) => {
+				$('#msgView').val(result)
+			})
+			 
+			/*
+			$.ajax({				
+				url : 'param.jsp'
+				, type : 'posts'
+				// , data : 'name=hong&age=25'
+				, data : {
+					name : name
+					, age : age
+				}
+				, success : function(data){
+					$('#msgView').val(data)
+				}, error : function(){
+					alert('실패')
+				}
+			})
+			*/
+			
+			
+		})
+	})
+</script>
+</head>
+<body>
+	<textarea rows="10" cols="80" id="msgView"></textarea><br>
+	이름 : <input type="text" name="name" id="name"><br>
+	나이 : <input type="text" name="age" id="age"><br>	
+	<!-- name : 클라이언트가 자기가 가진 값을 서버로 전송할 때 사용 -->
+	<button>전송</button>
+</body>
+</html>

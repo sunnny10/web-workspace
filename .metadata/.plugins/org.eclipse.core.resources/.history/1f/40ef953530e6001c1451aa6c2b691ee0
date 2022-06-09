@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <!-- prefix 다른 걸로 써도 됨 -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- prefix는 여기 c를 말함 -->
+	<c:choose>
+	</c:choose>
+</body>
+</html>

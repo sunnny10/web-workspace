@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!--<script src="http://localhost:9999/Lecture-Web/jquery/js/jquery-3.6.0.min.js"></script>-->
+<!--<script src="/Lecture-Web/jquery/js/jquery-3.6.0.min.js"></script>-->
+<!--<script src="js/jquery-3.6.0.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+// 	jquery 기본 문법 : $(선택자).함수()
+					  // 콜백함수
+	$(document).ready(function() {	
+		alert('hello');
+	})
+	
+	$(document).ready(function() {	
+		alert('ready');
+	})
+// $(document).ready(function() { 를 아래처럼 쓸 수 있다.
+	$(function(){
+		alert('ready2...');
+	})
+	
+//	순서는 보장하지 못하지만 각각 실행된다. 모듈별로 실행 가능
+	
+//	window.onload = function(){	//body를 다 읽고, dom객체가 다 로드된 다음 실행
+//		alert('Hello');
+//	}
+	
+//	window.onload = function(){
+//		document.write('good!!!');
+//	}	// 여기만 실행된다. 다시 덮어썼기 때문에
+</script>
+</head>
+<body>
+	
+</body>
+</html>
